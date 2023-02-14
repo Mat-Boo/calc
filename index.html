@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-theme1.css">
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body>
+  <main>
+    <div class="header">
+      <div class="logo">calc</div>
+      <div class="theme-select">
+        <div class="theme-title">THEME</div>
+        <div class="theme-nb-select">
+          <div class="theme-nb">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          <div class="red-point">
+            <svg width="16" height="16" fill="currentColor" id="1stCircle" class="active-circle circle bi bi-circle-fill" viewBox="0 0 16 16">
+              <circle cx="8" cy="8" r="8"/>
+            </svg>
+            <svg width="16" height="16" fill="currentColor" id="2ndCircle" class="circle bi bi-circle-fill" viewBox="0 0 16 16">
+              <circle cx="8" cy="8" r="8"/>
+            </svg>
+            <svg width="16" height="16" fill="currentColor" id="3rdCircle" class="circle bi bi-circle-fill" viewBox="0 0 16 16">
+              <circle cx="8" cy="8" r="8"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen">
+      0
+    </div>
+    <div class="keypad">
+      <div class="line">
+        <p class="key number-sign">7</p>
+        <p class="key number-sign">8</p>
+        <p class="key number-sign">9</p>
+        <p class="key del">DEL</p>
+      </div>
+      <div class="line">
+        <p class="key number-sign">4</p>
+        <p class="key number-sign">5</p>
+        <p class="key number-sign">6</p>
+        <p class="key number-sign">+</p>
+      </div>
+      <div class="line">
+        <p class="key number-sign">1</p>
+        <p class="key number-sign">2</p>
+        <p class="key number-sign">3</p>
+        <p class="key number-sign">-</p>
+      </div>
+      <div class="line">
+        <p class="key number-sign">.</p>
+        <p class="key number-sign">0</p>
+        <p class="key number-sign">/</p>
+        <p class="key number-sign">x</p>
+      </div>
+      <div class="line">
+        <p class="big-key reset">RESET</p>
+        <p class="big-key result">=</p>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

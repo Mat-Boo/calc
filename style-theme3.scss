@@ -1,0 +1,201 @@
+$main-font: 'Spartan', sans-serif;
+$main-font-size: 32px;
+
+//Theme 3
+
+//Background
+
+$t3-main-bg: hsl(268, 75%, 9%);
+$t3-toggle-keypad-screen-bg: hsl(268, 71%, 12%);
+
+//Keys
+
+$t3-key-bg-fct: hsl(281, 89%, 26%);
+$t3-key-shadow-fct: hsl(285, 91%, 52%);
+
+$t3-key-bg-result: hsl(176, 100%, 44%);
+$t3-key-shadow-result: hsl(177, 92%, 70%);
+
+$t3-key-bg: hsl(268, 47%, 21%);
+$t3-key-shadow: hsl(290, 70%, 36%);
+
+//Text
+
+$t3-key: hsl(52, 100%, 62%);
+$t3-result: hsl(198, 20%, 13%);
+$t3-white: hsl(0, 0, 100%);
+//_________________________________________________________________
+
+* {
+ padding: 0;
+ margin: 0;
+}
+
+body  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background: $t3-main-bg;
+}
+
+main {
+    width: 335px;
+    margin: 0 auto;
+    font-family: $main-font;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    padding: 20px;
+    
+}
+
+.header {
+    color: $t3-key;
+    height: 16%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2em;
+}
+
+.theme-select {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.theme-title {
+    font-size: 0.8em;
+    align-self: end;
+    margin-right: 20px;
+}
+
+.theme-nb-select {
+    width: 80px;
+}
+
+.theme-nb {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.theme-nb {
+    font-size: 0.8em;
+    padding: 0 5px 0 5px;
+}
+
+.red-point {
+    background: $t3-toggle-keypad-screen-bg;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circle {
+    color: $t3-toggle-keypad-screen-bg;
+    margin: 5px;
+}
+
+.active-circle {
+    color: $t3-key-bg-result;
+}
+
+.screen {
+    background: $t3-toggle-keypad-screen-bg;
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+    text-align: end;
+    color: $t3-key;
+    margin-bottom: 20px ;
+}
+
+.keypad {
+    background: $t3-toggle-keypad-screen-bg;
+    border-radius: 20px;
+    height: 68%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.screen, .key {
+    font-size: $main-font-size;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.number-sign, .del {
+    color: $t3-key;
+    background: $t3-key-bg;
+    padding: 15px;
+    border-radius: 10px;
+    width: 34px;
+    height: 34px;
+    box-shadow: 0 4px 0px $t3-key-shadow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-sign {
+    color: $t3-key;
+    background: $t3-key-bg;
+    box-shadow: 0 4px 0px $t3-key-shadow;
+}
+
+.del {
+    color: $t3-white;
+    background: $t3-key-bg-fct;
+    font-size: 1em;
+    box-shadow: 0 4px 0px $t3-key-shadow-fct;
+}
+
+.reset, .result {
+    color: $t3-white;
+    font-size: 1em;
+    background: $t3-key-bg-fct;
+    padding: 15px;
+    border-radius: 10px;
+    width: 111px;
+    height: 34px;
+    box-shadow: 0 4px 0px $t3-key-shadow-fct;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset {
+    background: $t3-key-bg-fct;
+    box-shadow: 0 4px 0px $t3-key-shadow-fct;
+}
+
+.result {
+    background: $t3-key-bg-result;
+    box-shadow: 0 4px 0px $t3-key-shadow-result;
+}
+
+@media screen and (min-width: 500px) {
+    main {
+        width: 460px;
+    }
+    .number-sign, .del {
+        width: 64px;
+    }
+    .reset, .result {
+        width: 172px;
+    }
+
+}

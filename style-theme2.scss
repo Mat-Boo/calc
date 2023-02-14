@@ -1,0 +1,202 @@
+$main-font: 'Spartan', sans-serif;
+$main-font-size: 32px;
+
+//****Theme 2****
+
+//Background
+
+$t2-main-bg: hsl(0, 0%, 90%);
+$t2-toggle-keypad-bg: hsl(0, 5%, 81%);
+$t2-screen-bg: hsl(0, 0%, 93%);
+
+//Keys
+
+$t2-key-bg-fct: hsl(185, 42%, 37%);
+$t2-key-shadow-fct: hsl(185, 58%, 25%);
+
+$t2-key-bg-result: hsl(25, 98%, 40%);
+$t2-key-shadow-result: hsl(25, 99%, 27%);
+
+$t2-key-bg: hsl(45, 7%, 89%);
+$t2-key-shadow: hsl(35, 11%, 61%);
+
+//Text
+
+$t2-key: hsl(60, 10%, 19%);
+$t2-white: hsl(0, 0, 100%);
+//_________________________________________________________________
+
+* {
+ padding: 0;
+ margin: 0;
+}
+
+body  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background: $t2-main-bg;
+}
+
+main {
+    width: 335px;
+    margin: 0 auto;
+    font-family: $main-font;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    padding: 20px;
+    
+}
+
+.header {
+    color: $t2-key;
+    height: 16%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2em;
+}
+
+.theme-select {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.theme-title {
+    font-size: 0.8em;
+    align-self: end;
+    margin-right: 20px;
+}
+
+.theme-nb-select {
+    width: 80px;
+}
+
+.theme-nb {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.theme-nb {
+    font-size: 0.8em;
+    padding: 0 5px 0 5px;
+}
+
+.red-point {
+    background: $t2-screen-bg;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.circle {
+    color: $t2-screen-bg;
+    margin: 5px;  
+}
+
+.active-circle {
+    color: $t2-key-bg-result;
+}
+
+.screen {
+    background: $t2-screen-bg;
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+    text-align: end;
+    color: $t2-key;
+    margin-bottom: 20px ;
+}
+
+.keypad {
+    background: $t2-toggle-keypad-bg;
+    border-radius: 20px;
+    height: 68%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.screen, .key {
+    font-size: $main-font-size;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.number-sign, .del {
+    color: $t2-key;
+    background: $t2-key-bg;
+    padding: 15px;
+    border-radius: 10px;
+    width: 34px;
+    height: 34px;
+    box-shadow: 0 4px 0px $t2-key-shadow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-sign {
+    color: $t2-key;
+    background: $t2-key-bg;
+    box-shadow: 0 4px 0px $t2-key-shadow;
+}
+
+.del {
+    color: $t2-white;
+    background: $t2-key-bg-fct;
+    font-size: 1em;
+    box-shadow: 0 4px 0px $t2-key-shadow-fct;
+}
+
+.reset, .result {
+    color: $t2-white;
+    font-size: 1em;
+    background: $t2-key-bg-fct;
+    padding: 15px;
+    border-radius: 10px;
+    width: 111px;
+    height: 34px;
+    box-shadow: 0 4px 0px $t2-key-shadow-fct;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset {
+    background: $t2-key-bg-fct;
+    box-shadow: 0 4px 0px $t2-key-shadow-fct;
+}
+
+.result {
+    background: $t2-key-bg-result;
+    box-shadow: 0 4px 0px $t2-key-shadow-result;
+}
+
+@media screen and (min-width: 500px) {
+    main {
+        width: 460px;
+    }
+    .number-sign, .del {
+        width: 64px;
+    }
+    .reset, .result {
+        width: 172px;
+    }
+
+}
